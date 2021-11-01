@@ -46,7 +46,7 @@ Install_RealM(){
   [[ -z ${version} ]] && version="1"
   if [[ ${version} == [2] ]]; then  
   mkdir /etc/realm
-  wget -N --no-check-certificate https://hub.fastgit.org/zhboner/realm/releases/download/v1.4/realm && chmod +x realm && mv realm1.4 /etc/realm/realm
+  wget -N --no-check-certificate https://hub.fastgit.org/zhboner/realm/releases/download/v1.4/realm && chmod +x realm && mv -b realm /etc/realm/realm
   else
   mkdir /etc/realm
   wget -N --no-check-certificate https://recordaily.com/soft/realm1.2.2 && chmod +x realm1.2.2 && mv realm1.2.2 /etc/realm/realm
@@ -63,7 +63,7 @@ Install_RealM(){
   wget -N --no-check-certificate https://github.com/seal0207/EasyRealM/raw/main/realm1.2.0 && chmod +x realm1.2.0 && mv realm1.2.0 /etc/realm/realm
   else
   mkdir /etc/realm
-  wget -N --no-check-certificate https://github.com/zhboner/realm/releases/download/v1.4/realm && chmod +x realm && mv realm1.4 /etc/realm/realm  
+  wget -N --no-check-certificate https://github.com/zhboner/realm/releases/download/v1.4/realm && chmod +x realm && mv -b realm /etc/realm/realm  
   fi
   fi
   
