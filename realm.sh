@@ -40,10 +40,10 @@ Install_RealM(){
   if [[ ${download} == [2] ]]; then
   echo -e "#############################################################"
   echo -e "#                     请选择下载版本:                       #"  
-  echo -e "#    1.（1.2.2为修复断流版）   2.（1.4原作者最后一版）    #"
+  echo -e "#    1.（1.2.2为修复断流版）   2.（1.4原作者最新版）    #"
   echo -e "#############################################################"
-  read -p "请选择(默认为1.2.1修复断流版): " version
-  [[ -z ${version} ]] && version="1"
+  read -p "请选择(默认为1.4原版): " version
+  [[ -z ${version} ]] && version="2"
   if [[ ${version} == [2] ]]; then  
   mkdir /etc/realm
   wget -N --no-check-certificate https://hub.fastgit.org/zhboner/realm/releases/download/v1.4/realm && chmod +x realm && mv -b realm /etc/realm/realm
@@ -54,10 +54,10 @@ Install_RealM(){
   else
   echo -e "#############################################################"
   echo -e "#                     请选择下载版本:                       #"  
-  echo -e "#    1.（1.2.2为修复断流版）   2.（1.4原作者最后一版）    #"
+  echo -e "#    1.（1.2.2为修复断流版）   2.（1.4原作者最新版）    #"
   echo -e "#############################################################"
-  read -p "请选择(默认为1.2.2修复断流版): " version
-  [[ -z ${version} ]] && version="1"
+  read -p "请选择(默认为1.4原版): " version
+  [[ -z ${version} ]] && version="2"
   if [[ ${version} == [2] ]]; then  
   mkdir /etc/realm
   wget -N --no-check-certificate https://github.com/seal0207/EasyRealM/raw/main/realm1.2.0 && chmod +x realm1.2.0 && mv realm1.2.0 /etc/realm/realm
@@ -522,7 +522,7 @@ echo
 echo "#############################################################"
 echo "#                 RealM 一键脚本  By :Seal0207              #"
 echo "#############################################################"
-echo -e "公告：$(curl -L -s --connect-timeout 3 https://ghproxy.com/https://raw.githubusercontent.com/seal0207/EasyRealM/main/notice)"
+echo -e "公告：$(curl -L -s --connect-timeout 3 https://raw.fastgit.org/SXR666/EasyRealM/main/notice)"
 echo -e "
  当前版本 ${Red_font_prefix}[v${sh_ver}]${Font_color_suffix}
  ${Green_font_prefix}0.${Font_color_suffix} 更新脚本
