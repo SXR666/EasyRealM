@@ -3,7 +3,7 @@ PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
 export PATH
 clear
 
-sh_ver="1.0.7"
+sh_ver="1.0.8"
 Green_font_prefix="\033[32m" && Red_font_prefix="\033[31m" && Green_background_prefix="\033[42;37m" && Red_background_prefix="\033[41;37m" && Font_color_suffix="\033[0m"
 Info="${Green_font_prefix}[信息]${Font_color_suffix}"
 Error="${Red_font_prefix}[错误]${Font_color_suffix}"
@@ -46,7 +46,7 @@ Install_RealM(){
   [[ -z ${version} ]] && version="1"
   if [[ ${version} == [2] ]]; then  
   mkdir /etc/realm
-  wget -N --no-check-certificate https://hub.fastgit.org/zhboner/realm/releases/download/v1.4/realm && chmod +x realm1.4 && mv realm1.4 /etc/realm/realm
+  wget -N --no-check-certificate https://hub.fastgit.org/zhboner/realm/releases/download/v1.4/realm && chmod +x realm && mv realm1.4 /etc/realm/realm
   else
   mkdir /etc/realm
   wget -N --no-check-certificate https://recordaily.com/soft/realm1.2.2 && chmod +x realm1.2.2 && mv realm1.2.2 /etc/realm/realm
@@ -63,7 +63,7 @@ Install_RealM(){
   wget -N --no-check-certificate https://github.com/seal0207/EasyRealM/raw/main/realm1.2.0 && chmod +x realm1.2.0 && mv realm1.2.0 /etc/realm/realm
   else
   mkdir /etc/realm
-  wget -N --no-check-certificate https://github.com/zhboner/realm/releases/download/v1.4/realm && chmod +x realm1.4 && mv realm1.4 /etc/realm/realm  
+  wget -N --no-check-certificate https://github.com/zhboner/realm/releases/download/v1.4/realm && chmod +x realm && mv realm1.4 /etc/realm/realm  
   fi
   fi
   
